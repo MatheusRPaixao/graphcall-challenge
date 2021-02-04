@@ -4,13 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {HttpClientModule} from "@angular/common/http";
+import { SearchYoutubeVideosComponent } from './search-youtube-videos/search-youtube-videos.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchYoutubeVideosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
