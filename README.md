@@ -1,27 +1,53 @@
-# App
+# GraphCall challenge 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Project created by Matheus Paixão for a challenge propose by GraphCall
 
-## Development server
+## Local serve 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To run the app you need to:
 
-## Code scaffolding
+    npm install
+    npm start or ng serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Search videos on Youtube
+- Analyze videos by thumbnail, title and description 
+- Watch selected video
+- Responsive for smaller devices
 
-## Running unit tests
+## Implementation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The app consist of:
 
-## Running end-to-end tests
+#### Utils
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+. A service for communication with the YoutubeAPI;
 
-## Further help
+. A interface component to map the communication with the YoutubeAPI
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+#### Views
+
+. A component to process the user input and the response from the YoutubeAPI
+
+
+### Frameworks
+- BrowserModule
+- AppRoutingModule
+- HttpClientModule
+- NgbModule
+- YouTubePlayerModule
+- BrowserAnimationsModule
+- MatFormFieldModule
+- ReactiveFormsModule
+- MatInputModule
+- NgxLoadingModule
+
+## Cloud service
+
+The app is available on 
+http://graphcallchallenge.s3-website-sa-east-1.amazonaws.com/searchVideos
+for facilitate the test.
+
