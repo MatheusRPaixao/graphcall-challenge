@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+/* Default theme. ~960B */
+@import '~@vime/core/themes/default.css';
+
+/* Optional light theme (extends default). ~400B */
+@import '~@vime/core/themes/light.css';

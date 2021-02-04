@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+import { SearchYoutubeVideosComponent } from './search-youtube-videos/search-youtube-videos.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {VimeModule} from '@vime/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {HttpClientModule} from "@angular/common/http";
-import { SearchYoutubeVideosComponent } from './search-youtube-videos/search-youtube-videos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SearchYoutubeVideosComponent } from './search-youtube-videos/search-you
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    VimeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
