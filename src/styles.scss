@@ -3,8 +3,11 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-/* Default theme. ~960B */
-@import '~@vime/core/themes/default.css';
+html, body {
+  margin: 0;
+  min-height: 100vh !important;
+  height: 100% !important;
+}
 
-/* Optional light theme (extends default). ~400B */
-@import '~@vime/core/themes/light.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
