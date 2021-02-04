@@ -1,0 +1,45 @@
+
+.video-info-container {
+  height: 100px;
+  overflow-y: hidden;
+  font-weight: bolder;
+  cursor: pointer;
+  line-height: 1.14;
+
+  .video-description {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:hover {
+    overflow-y: visible;
+    height: fit-content;
+    border: solid 2px #00000088;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px #00000088;
+
+    .video-description {
+      -webkit-text-fill-color: inherit;
+    }
+
+  }
+}
+
+.divisor {
+  background-color: #00000088;
+}
+
+.results {
+  font-size: 1.5rem;
+}
+
+.video-title {
+  font-size: 1.05rem;
+}
+
+.video-description {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+

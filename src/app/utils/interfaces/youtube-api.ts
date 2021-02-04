@@ -5,7 +5,7 @@ export interface YoutubeApiRequest {
 
 export interface YoutubeApiResponse {
   etag: string;
-  items: YoutubeApiItems[];
+  items: YoutubeApiItem[];
   kind: string;
   nextPageToken: string;
   pageInfo: {
@@ -15,7 +15,7 @@ export interface YoutubeApiResponse {
   regionCode: string;
 }
 
-interface YoutubeApiItems {
+export interface YoutubeApiItem {
   etag: string;
   id: {
     kind: string;
