@@ -1,13 +1,17 @@
+.results-container {
+  max-height: 550px;
+  overflow-y: auto;
+}
 
 .video-info-container {
-  height: 100px;
+  min-height: 130px;
   overflow-y: hidden;
   font-weight: bolder;
   cursor: pointer;
   line-height: 1.14;
 
   .video-description {
-    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(180deg, white 0%, rgba(0, 0, 0, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -22,24 +26,37 @@
     .video-description {
       -webkit-text-fill-color: inherit;
     }
-
   }
 }
 
-.divisor {
-  background-color: #00000088;
-}
-
 .results {
-  font-size: 1.5rem;
+  font-size: 28px;
+  max-height: 50px;
 }
 
 .video-title {
-  font-size: 1.05rem;
+  font-size: 16px;
 }
 
 .video-description {
-  font-size: 0.75rem;
+  font-size: 14px;
   font-weight: normal;
 }
 
+@media (max-width: 992px) {
+  .results-container {
+    max-height: 400px;
+  }
+
+  .results {
+    font-size: 22px;
+  }
+
+  .video-title {
+    font-size: 14px;
+  }
+
+  .video-description {
+    font-size: 13px;
+  }
+}

@@ -20,7 +20,9 @@ export class SearchYoutubeVideosComponent implements OnInit {
 
   ngOnInit(): void {
     this.setSearchInputAndWatcher();
-    this.loadVideos('React');
+
+    // Initialize search
+    this.searchInput.setValue('React');
   }
 
   selectVideo(item: YoutubeApiItem): void {
@@ -31,17 +33,19 @@ export class SearchYoutubeVideosComponent implements OnInit {
     const params: YoutubeApiRequest[] = [
       {name: 'q', value: value},
       {name: 'type', value: 'video'},
+      {name: 'maxResults', value: '20'},
+      {name: 'part', value: 'id,snippet'},
     ];
     this.youtubeApiService.getYoutubeVideos(params).subscribe((response) => {
       this.youtubeResponse = response;
-      this.selectedVideo = this.youtubeResponse.items[0];
+      this.selectVideo(this.youtubeResponse.items[0]);
     });
   }
 
   private setSearchInputAndWatcher(): void {
     this.searchInput = new FormControl('');
     this.searchInput.valueChanges
-      .pipe(debounceTime(1000), distinctUntilChanged())
+      .pipe(debounceTime(500), distinctUntilChanged())
       .subscribe((value) => {
         this.loadVideos(value);
       });

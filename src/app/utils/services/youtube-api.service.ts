@@ -8,7 +8,7 @@ import {YoutubeApiRequest, YoutubeApiResponse} from "../interfaces/youtube-api";
 })
 export class YoutubeApiService {
   private youtubeApiKey = 'AIzaSyCRkqXEGlMHMLgtOG0IuzD5IUZbvO9Kq9c';
-  private baseYoutubeApiUrl = `https://www.googleapis.com/youtube/v3/search?part=id,snippet&maxresults=20&key=${this.youtubeApiKey}`;
+  private baseYoutubeApiUrl = `https://www.googleapis.com/youtube/v3/search?key=${this.youtubeApiKey}`;
 
   constructor(
     private http: HttpClient,

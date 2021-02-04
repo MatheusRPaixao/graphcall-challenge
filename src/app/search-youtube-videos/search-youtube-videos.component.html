@@ -1,38 +1,38 @@
 
 <div class="container-fluid p-4 h-100" *ngIf="youtubeResponse">
-  <div class="d-flex search py-3">
-    <mat-form-field>
-      <mat-label>Search here</mat-label>
+  <div class="d-flex search p-1 p-lg-3">
+    <mat-form-field class="col col-md-6">
+      <mat-label style="color: white">Digite aqui</mat-label>
       <input type="search" matInput [formControl]="searchInput">
     </mat-form-field>
   </div>
-  <div class="d-flex flex-column flex-md-row">
-    <div class="d-flex flex-row flex-md-column col col-md-6">
-      <div class="col"><span class="results">Resultados para "{{searchInput.value}}"</span></div>
+  <div class="d-flex flex-column-reverse flex-lg-row">
+    <div class="col col-lg-4">
+      <div class="col results mb-2">Resultados</div>
 
-      <div class="d-flex flex-row video-info-container justify-content-center-align-items-center py-2 min-h-100"
-           *ngFor="let videosInfo of youtubeResponse.items"
-           (click)="selectVideo(videosInfo)">
-        <div class="col-3 d-flex justify-content-center align-items-center">
-          <img width="120px"
-               height="auto"
-               [src]="videosInfo.snippet.thumbnails.high.url" [alt]="videosInfo.snippet.title">
-        </div>
-        <div class="col d-flex flex-column">
-          <span class="video-title" [innerHTML]="videosInfo.snippet.title"></span>
-          <span class="video-description" [innerHTML]="videosInfo.snippet.description"></span>
+      <div class="results-container">
+        <div class="d-flex flex-row video-info-container justify-content-center-align-items-center py-2"
+             *ngFor="let videosInfo of youtubeResponse.items"
+             (click)="selectVideo(videosInfo)">
+          <div class="col-5 col-sm-4 d-flex justify-content-center align-items-center">
+            <img width="140px"
+                 height="auto"
+                 [src]="videosInfo.snippet.thumbnails.high.url" [alt]="videosInfo.snippet.title">
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="video-title mb-2" [innerHTML]="videosInfo.snippet.title"></span>
+            <span class="video-description" [innerHTML]="videosInfo.snippet.description"></span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="d-flex flex-column align-items-center justify-content-center col col-md-6">
-      <span class="video-title font-weight-bold" [innerHTML]="selectedVideo.snippet.title"></span>
-      <youtube-player [videoId]="selectedVideo.id.videoId"
-                      class="w-100 h-100"
-                      width="100%"
-                      height="100%"
-      ></youtube-player>
-      <span class="video-description" [innerHTML]="selectedVideo.snippet.description"></span>
+    <div class="d-flex flex-column align-items-center justify-content-center col">
+      <span class="d-none d-lg-flex video-title font-weight-bold" [innerHTML]="selectedVideo.snippet.title"></span>
+      <div class="embed-responsive embed-responsive-16by9 my-2">
+        <youtube-player [videoId]="selectedVideo.id.videoId"></youtube-player>
+      </div>
+      <span class="d-none d-lg-flex video-description" [innerHTML]="selectedVideo.snippet.description"></span>
     </div>
   </div>
 </div>
