@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {YoutubeApiService} from "../utils/services/youtube-api.service";
-import {YoutubeApiItem, YoutubeApiRequest, YoutubeApiResponse} from "../utils/interfaces/youtube-api";
-import {FormControl} from "@angular/forms";
-import {debounceTime, distinctUntilChanged} from "rxjs/operators";
+import {YoutubeApiService} from '../utils/services/youtube-api.service';
+import {YoutubeApiItem, YoutubeApiRequest, YoutubeApiResponse} from '../utils/interfaces/youtube-api';
+import {FormControl} from '@angular/forms';
+import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
+import {ngxLoadingAnimationTypes} from 'ngx-loading';
 
 @Component({
   selector: 'app-search-youtube-videos',
@@ -13,6 +14,7 @@ export class SearchYoutubeVideosComponent implements OnInit {
   youtubeResponse: YoutubeApiResponse;
   selectedVideo: YoutubeApiItem;
   searchInput: FormControl;
+  ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
 
   constructor(
     private youtubeApiService: YoutubeApiService,

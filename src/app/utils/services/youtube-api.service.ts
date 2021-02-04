@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {YoutubeApiRequest, YoutubeApiResponse} from "../interfaces/youtube-api";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {YoutubeApiRequest, YoutubeApiResponse} from '../interfaces/youtube-api';
 
 @Injectable({
   providedIn: 'root'

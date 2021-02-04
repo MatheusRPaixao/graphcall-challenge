@@ -36,3 +36,11 @@
     </div>
   </div>
 </div>
+
+<ngx-loading [show]="!youtubeResponse"
+             [config]=" {
+                           animationType: ngxLoadingAnimationTypes.circle,
+                           primaryColour: '#ececec88',
+                           secondaryColour: '#ececec22'
+                         }"
+></ngx-loading>

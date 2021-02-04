@@ -6,11 +6,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {YouTubePlayerModule} from "@angular/youtube-player";
+import {YouTubePlayerModule} from '@angular/youtube-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatInputModule} from "@angular/material/input";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {NgxLoadingModule} from 'ngx-loading';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {MatInputModule} from "@angular/material/input";
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    NgxLoadingModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

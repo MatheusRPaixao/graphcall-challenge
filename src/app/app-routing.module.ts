@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {SearchYoutubeVideosComponent} from "./search-youtube-videos/search-youtube-videos.component";
+import {SearchYoutubeVideosComponent} from './search-youtube-videos/search-youtube-videos.component';
 
 
 const routes: Routes = [
